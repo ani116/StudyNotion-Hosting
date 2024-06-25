@@ -13,6 +13,8 @@
 
 # Secret
 .env
+# node modules
+node_modules
 
 # misc
 .DS_Store
