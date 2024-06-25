@@ -17,10 +17,26 @@ const Template = ({title, description, formType, image}) => {
                 <p className='text-richblack-5 text-lg '>{description}</p>
             </div>
 
+            <div className='flex flex-col gap-1'>
+                <div className='text-richblack-5'>
+                    Choose Role
+                </div>
+                <div className={`flex flex-row space-x-5 rounded-3xl ${formType === "login" ? "invisible" : "visible"}`}>
+                    <button 
+                        className={`text-richblack-5 cursor-pointer ${accountType === "Student" ? "bg-yellow-300 px-6 py-2 rounded-full" : ""}`} 
+                        onClick={() => setAccountType("Student") } 
+                    >
+                        Student
+                    </button>
 
-            <div className='flex flex-row justify-between space-x-5 border border-white w-[230px] rounded-3xl p-2'>
-                <button className='text-richblack-5' onClick={() => setAccountType("Student")}>Student</button>
-                <button className='text-richblack-5' onClick={() => setAccountType("Instructor")}>Instructor</button>
+                    <button 
+                        className={`text-richblack-5 cursor-pointer ${accountType === "Instructor" ? "bg-yellow-300 px-6 py-2 rounded-full" : ""} `}
+                        onClick={() => setAccountType("Instructor")}
+                        
+                    >
+                        Instructor
+                    </button>
+                </div>
             </div>
             
             <div>
