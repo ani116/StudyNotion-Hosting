@@ -25,7 +25,8 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors(
     {
-        origin: "http://localhost:3000"    // the request coming from frontend, we have to entertaint it
+        origin: "*",    // the request coming from frontend, we have to entertaint it
+        credentials: true,
     }
 ))
 
