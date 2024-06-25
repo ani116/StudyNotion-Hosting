@@ -82,6 +82,7 @@ export function signup(accountType, firstName, lastName, email, password, confir
             }
 
             toast.success("sign up successfully")
+            toast.success("Now Go Back to LogIn")
 
         } 
         catch (error) {

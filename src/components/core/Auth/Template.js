@@ -18,7 +18,7 @@ const Template = ({title, description, formType, image}) => {
             </div>
 
             <div className='flex flex-col gap-1'>
-                <div className='text-richblack-5'>
+                <div className={`text-richblack-5  ${formType === "login" ? "invisible" : "visible"} `}>
                     Choose Role
                 </div>
                 <div className={`flex flex-row space-x-5 rounded-3xl ${formType === "login" ? "invisible" : "visible"}`}>
