@@ -337,10 +337,10 @@ const getFullCourseDetails = async(req, res) => {
 
 const getInstructorCourses = async(req, res) => {
   try {
-    const {instructorId} = req.user.id
+    const instructorId = req.user.id
 
     // find course by instructor id
-    const instructorCourses = await Course.find(instructorId)
+    const instructorCourses = await Course.find({instructor: instructorId})
 
     res.status(200).json({
       success:true,
